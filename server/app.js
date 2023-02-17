@@ -33,7 +33,7 @@ app.use(cors);
 app.use(express.json());
 app.use(logging);
 
-const MONGODB = process.env.MONGODB || "mongodb://localhost/pizza";
+const MONGODB = process.env.MONGODB || "mongodb://localhost/pizzas";
 
 // Database stuff
 mongoose.connect(MONGODB);

@@ -3,12 +3,15 @@ import * as store from "./store";
 import axios from "axios";
 import Navigo from "navigo";
 import { capitalize } from "lodash";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 let PIZZA_PLACE_API_URL;
 
 if (process.env.PIZZA_PLACE_API_URL) {
   PIZZA_PLACE_API_URL =
-    process.env.PIZZA_PLACE_API_URL || "http://localhost:4040";
+    process.env.PIZZA_PLACE_API_URL || "http://localhost:4040/pizzas";
 } else {
   console.error(
     "Please create the .env file with a value for PIZZA_PLACE_API_URL"
